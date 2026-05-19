@@ -23,6 +23,41 @@ This project replaces all of that with a structured, automated operations system
 
 ---
 
+## ⚡ The Automation: How It Works
+
+When a new relative is added to the directory, a **4-step automation pipeline** fires automatically:
+
+<div align="center">
+<img src="./snaps/automation_pipeline_2.png" alt="Automation Pipeline" width="90%"/>
+</div>
+
+**Here's the automation flow running inside Make:**
+
+<div align="center">
+<img src="./snaps/motion/flow_explanation_of_monday_integration.gif" alt="Automation Flow in Make" width="90%"/>
+</div>
+
+<br/>
+
+**What the relative receives** — a personalized email containing:
+- A greeting using their name
+- Temperature forecast for the scheduled visit date
+- Weather conditions (e.g., clear sky, light rain, overcast)
+- A warm closing from the Patient Care team
+
+---
+
+## Tools & Platforms
+
+| Tool | Role in This Project |
+|------|---------------------|
+| [**monday.com**](https://monday.com) | Workflow boards for tasks, medications, CRM, relatives directory, and the sales dashboard |
+| [**Make (Integromat)**](https://www.make.com) | Automation engine that connects monday.com → Weather API → Email → Status update |
+| [**OpenWeatherMap API**](https://openweathermap.org/api) | Provides real-time weather forecast data based on geographic coordinates |
+| **SMTP (Email)** | Delivers personalized weather notification emails to relatives |
+
+---
+
 ## The Problems
 
 | # | Area | What Was Happening |
@@ -102,30 +137,6 @@ A directory of patient relatives storing their contact details, physical locatio
 
 ---
 
-## ⚡ The Automation: How It Works
-
-When a new relative is added to the directory, a **4-step automation pipeline** fires automatically:
-
-<div align="center">
-<img src="./snaps/automation_pipeline_2.png" alt="Automation Pipeline" width="90%"/>
-</div>
-
-**Here's the automation flow running inside Make:**
-
-<div align="center">
-<img src="./snaps/motion/flow_explanation_of_monday_integration.gif" alt="Automation Flow in Make" width="90%"/>
-</div>
-
-<br/>
-
-**What the relative receives** — a personalized email containing:
-- A greeting using their name
-- Temperature forecast for the scheduled visit date
-- Weather conditions (e.g., clear sky, light rain, overcast)
-- A warm closing from the Patient Care team
-
----
-
 ## Bonus Automations
 
 Beyond the core requirements, two proactive automations were added:
@@ -134,17 +145,6 @@ Beyond the core requirements, two proactive automations were added:
 |------------|-------------|
 | **📋 Daily Medication Summary** | Caregivers receive an automated email each morning summarizing the day's medication schedule |
 | **🔔 Stale Lead Nudge** | Sales staff get notified when a lead has been sitting idle in the pipeline, prompting timely follow-ups |
-
----
-
-## Tools & Platforms
-
-| Tool | Role in This Project |
-|------|---------------------|
-| [**monday.com**](https://monday.com) | Workflow boards for tasks, medications, CRM, relatives directory, and the sales dashboard |
-| [**Make (Integromat)**](https://www.make.com) | Automation engine that connects monday.com → Weather API → Email → Status update |
-| [**OpenWeatherMap API**](https://openweathermap.org/api) | Provides real-time weather forecast data based on geographic coordinates |
-| **SMTP (Email)** | Delivers personalized weather notification emails to relatives |
 
 ---
 
