@@ -107,7 +107,7 @@ A directory of patient relatives storing their contact details, physical locatio
 When a new relative is added to the directory, a **4-step automation pipeline** fires automatically:
 
 <div align="center">
-<img src="./snaps/automation_pipeline.png" alt="Automation Pipeline" width="90%"/>
+<img src="./snaps/automation_pipeline_2.png" alt="Automation Pipeline" width="90%"/>
 </div>
 
 **Here's the automation flow running inside Make:**
